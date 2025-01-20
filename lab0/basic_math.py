@@ -69,7 +69,7 @@ def skew(x):
     Возвращает значение, округленное до 2 знаков после запятой.
     """
     x_mean = np.mean(x)
-    x_std = np.std(x, ddof=1)
+    x_std = np.std(x, ddof=0)
     m3 = np.mean((x - x_mean) ** 3)
     skewness = m3 / (x_std ** 3)
     return round(skewness, 2)
